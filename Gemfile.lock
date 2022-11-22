@@ -239,6 +239,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rails-controller-testing
   rspec-rails
+  sassc-rails
   simple_form!
   sprockets-rails
   stimulus-rails
