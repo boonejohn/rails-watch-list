@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
   def index
-    @list = list.all
+    @list = List.all
   end
 
   def show; end
@@ -21,8 +21,11 @@ class ListsController < ApplicationController
 
   private
 
-  def restaurant_params
-    params.require(:list).permit :name
+  def set_list
+    @list = list.find(params[:id])
   end
 
+  def list_params
+    params.require(:list).permit :name
+  end
 end
