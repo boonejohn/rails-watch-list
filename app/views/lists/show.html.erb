@@ -1,7 +1,7 @@
 <h1><%= @list.name %></h1>
 
 <div>
-  <%= @List.movies.each do |movie| %>
+  <%= @list.movies.each do |movie| %>
     <%= movie.title %>
     <%= bookmark = Bookmark.where(movie: movie, list: @list) %>
     <%= link_to 'delete', bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "card-remove-link" %>
